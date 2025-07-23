@@ -1,0 +1,131 @@
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: springgreen;
+  color: #333;
+  padding: 16px;
+}
+
+/* App Container */
+.app-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 16px;
+}
+
+.title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 24px;
+  color: #1a1a1a;
+}
+
+/* Toolbar Buttons */
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.toolbar button {
+  padding: 10px 16px;
+  background-color: #007bff;
+  color: white;
+  font-weight: 500;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.toolbar button:hover {
+  background-color: #0056b3;
+}
+
+.toolbar button:disabled {
+  background-color: #aaa;
+  cursor: not-allowed;
+}
+
+/* Grid Layout */
+.file-grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+}
+
+/* File Card */
+.file-card {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 14px 10px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  transition: background 0.2s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.file-card:hover {
+  background-color: #e8f0fe;
+}
+
+.file-icon {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.file-name {
+  font-size: 0.9rem;
+  word-wrap: break-word;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+/* Action Buttons */
+.file-actions {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.file-actions button {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 4px;
+  transition: color 0.2s;
+}
+
+.file-actions button:hover {
+  color: #d00000;
+}
+
+/* Responsive Tweaks */
+@media (max-width: 768px) {
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .toolbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .toolbar button {
+    width: 100%;
+  }
+}
